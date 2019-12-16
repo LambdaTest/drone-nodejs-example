@@ -6,9 +6,11 @@ steps:
 - name: backend
   image: golang
   commands:
-    - go get
-    - go build
-    - go test
+    - mkdir data
+    - go get -u github.com/golang/dep/cmd/dep
+    - dep ensure
+    - go build -o mobile-node-remote-client .
+    - chmod +x mobile-node-remote-client
 
 - name: frontend
   image: node:6
