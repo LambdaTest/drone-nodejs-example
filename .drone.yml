@@ -1,7 +1,6 @@
-name: default
-
 kind: pipeline
 type: docker
+name: default
 
 steps:
 - name: backend
